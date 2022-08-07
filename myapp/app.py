@@ -54,7 +54,7 @@ app_ui = ui.page_fluid(
         """
         ### Soccer Player Experiment:
 
-        A look at normal distributions within the soccer player experiment from Chapter 3 of [Statistical Rethinking's](https://xcelab.net/rm/statistical-rethinking/) by Prof. Richard McElreath.
+        A look at normal distributions within the soccer field experiment from Chapter 3 of [Statistical Rethinking's](https://xcelab.net/rm/statistical-rethinking/) by Prof. Richard McElreath.
 
         Below are steps to viewing interations on the experiment:
         - Place a bunch of people at the center line of a soccer field
@@ -88,8 +88,8 @@ def server(input, output, session):
             df = sim_df[sim_df["sim"] == i]
             ax.plot(df["step"], df["y"], color = color, alpha= alpha)
 
-        ax.set_title(label = "Simulation of Random Walk")
-        ax.set_xlabel("Number of Steps")
+        ax.set_title(label = "Simulation of Random Walk from Midfield of Soccer Field")
+        ax.set_xlabel("Number of Steps from Midfield of Soccer Field")
         ax.set_ylabel("Position")
         return fig
 
