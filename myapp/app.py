@@ -42,7 +42,7 @@ def sim_steps(sim_number = 10, steps = 16, type = "float"):
 app_ui = ui.page_fluid(
         ui.layout_sidebar(
             ui.panel_sidebar(
-                ui.h2("Why normal distributions are normal"),
+                ui.h2("shinyPython Serverless Hosting Example"),
                 ui.input_slider("sample_size", "Sample Size", 1, 1000, 500),
                 ui.input_slider("steps", "Number of Steps", 1, 20, 16),
                 ui.input_select("step", "Step Type", {"float": "Float", "int": "Integer"}),
@@ -52,11 +52,11 @@ app_ui = ui.page_fluid(
             ui.output_plot("plot"),
             ui.markdown(
         """
-        ### Why normal distributions are normal
+        ### Soccer Player Experiment:
 
-        Chapter 3 of [Statistical Rethinking's](https://xcelab.net/rm/statistical-rethinking/) by Prof. Richard McElreath focuses on normal distribution
-        and its characteristics. It illustrates how to generate a normal distribution using the soccer field experiment:
+        A look at normal distributions within the soccer player experiment from Chapter 3 of [Statistical Rethinking's](https://xcelab.net/rm/statistical-rethinking/) by Prof. Richard McElreath.
 
+        Below are steps to viewing interations on the experiment:
         - Place a bunch of people at the center line of a soccer field
         - Each person flips a coin and moves one step to the right or left according to the outcome (head or tail)
         - Repeat this process multiple times
@@ -64,7 +64,7 @@ app_ui = ui.page_fluid(
 
         The app above simulates this experience by setting the sample size (i.e., number of people) and number of iterations. Where on each iteration, we draw a random number between -1 and 1 (can choose between float integer steps with the `Step Type` drop-down). The plot above shows the cumulative sum of each experiment across each step of the experience. You can notice how the distribution becomes more Gaussian as the number of steps increases.
 
-        Code available [here](https://github.com/RamiKrispin/shinyelive).
+        Code available [here](https://github.com/mattmajestic/shinyPython).
 
         """
     ),
