@@ -3,6 +3,7 @@ from shiny import App, render, ui
 from numpy import random 
 import pandas as pd
 import matplotlib.pyplot as plt
+import soccerdata as sd
 
 # Functions
 def random_steps(steps = 16, type = "float", low = -1, high = 1):
